@@ -12,7 +12,7 @@ This repository contains various implementations of sorting and searching algori
 - Pascal
 - Python
 - C++
-- Java
+- C#
 
 ## Usage
 Each programming language directory contains separate files for each algorithm implementation. To use a specific algorithm, follow these steps:
