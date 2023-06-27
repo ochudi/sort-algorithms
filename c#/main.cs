@@ -21,10 +21,10 @@ void Main()
 
     // Bubble Sort algorithm
     BubbleSort(numbers);
-    Console.WriteLine("Sorted array in ascending order using Bubble sort: " + string.Join(", ", numbers));
+    Console.WriteLine("\nSorted array in ascending order using Bubble sort: " + string.Join(", ", numbers));
 
     // Get the number to search from the user
-    Console.Write("Enter a number to search: ");
+    Console.Write("\nEnter a number to search: ");
     int k = int.Parse(Console.ReadLine());
 
     // Binary Search algorithm (should be called on sorted array)

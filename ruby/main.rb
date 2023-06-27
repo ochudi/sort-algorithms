@@ -87,10 +87,10 @@ puts "\nSorted list in descending order using Radix sort: #{numbers}"
 
 # Sort the list using bubble sort
 bubble_sort(numbers)
-puts "Sorted list in ascending order using Bubble sort: #{numbers}"
+puts "\nSorted list in ascending order using Bubble sort: #{numbers}"
 
 # Print the original list
-puts "Original list: #{numbers}"
+puts "\nList of numbers: #{numbers}"
 
 # Get the number to search from the user
 print "Enter a number to search: "
