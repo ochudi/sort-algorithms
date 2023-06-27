@@ -1,7 +1,6 @@
 #include <iostream>
 #include <vector>
 #include <algorithm>
-#include <random>
 #include <cmath>
 
 using namespace std;
@@ -90,15 +89,16 @@ int binary_search(const vector<int> &arr, int target)
 
 int main()
 {
-    // Generate a list of 20 random numbers
+    // Allow the user to input 20 numbers
     vector<int> numbers;
-    random_device rd;
-    mt19937 gen(rd());
-    uniform_int_distribution<> dis(1, 1000);
+    numbers.reserve(20);
 
     for (int i = 0; i < 20; i++)
     {
-        numbers.push_back(dis(gen));
+        int number;
+        cout << "Enter number " << i + 1 << ": ";
+        cin >> number;
+        numbers.push_back(number);
     }
 
     cout << "Original list: ";
@@ -111,7 +111,7 @@ int main()
     // Sort the list in descending order using radix sort
     radix_sort(numbers);
     reverse(numbers.begin(), numbers.end());
-    cout << "Sorted list in descending order using Radix sort: ";
+    cout << "\nSorted list in descending order using Radix sort: ";
     for (int i = 0; i < numbers.size(); i++)
     {
         cout << numbers[i] << " ";
@@ -120,7 +120,7 @@ int main()
 
     // Sort the list in ascending order using bubble sort
     bubble_sort(numbers);
-    cout << "Sorted list in ascending order using Bubble sort: ";
+    cout << "\nSorted list in ascending order using Bubble sort: ";
     for (int i = 0; i < numbers.size(); i++)
     {
         cout << numbers[i] << " ";
@@ -129,7 +129,7 @@ int main()
 
     // Get the number to search from the user
     int k;
-    cout << "Enter a number to search: ";
+    cout << "\nEnter a number to search: ";
     cin >> k;
 
     // Perform binary search
