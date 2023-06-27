@@ -1,5 +1,3 @@
-import random
-
 # Allow the user to input 20 numbers
 numbers = []
 for i in range(20):
