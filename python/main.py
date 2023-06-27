@@ -1,7 +1,11 @@
 import random
 
-# Generate a list of 20 random numbers
-numbers = random.sample(range(1, 1001), 20)
+# Allow the user to input 20 numbers
+numbers = []
+for i in range(20):
+    number = int(input(f"Enter number {i+1}: "))
+    numbers.append(number)
+
 print("Original list:", numbers)
 
 
@@ -72,17 +76,10 @@ print("\nSorted list in descending order using Radix sort:", numbers)
 
 # Sort the list using bubble sort
 bubble_sort(numbers)
-print("Sorted list in ascending order using :", numbers)
-
+print("\nSorted list in ascending order using Bubble sort:", numbers)
 
 # Print the original list
-print("Original list:", numbers)
-
-# Sort the list
-bubble_sort(numbers)
-
-# Print the sorted list
-print("Sorted list in ascending order:", numbers)
+print("\nList of numbers:", numbers)
 
 # Get the number to search from the user
 k = int(input("Enter a number to search: "))
