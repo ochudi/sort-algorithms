@@ -1,7 +1,13 @@
-require 'securerandom'
+# Allow the user to input 20 numbers
+puts "Enter 20 numbers:"
 
-# Generate a list of 20 random numbers
-numbers = Array.new(20) { rand(1..1000) }
+numbers = []
+(1..20).each do |i|
+  print "Enter number #{i}: "
+  number = gets.chomp.to_i
+  numbers << number
+end
+
 puts "Original list: #{numbers}"
 
 # Radix Sort algorithm.
